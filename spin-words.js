@@ -1,5 +1,5 @@
 function spinWords(words) {
-  let wordArray = words.split(' ')
+  let wordArray   = words.split(' ')
   let withReverse = ''
 
   wordArray.forEach((word, index) => {
@@ -22,4 +22,10 @@ function spinWords(words) {
 spinWords("Hey fellow warriors")
 
 
-//iterm2 zsh
+// Top solution
+
+function spinWords(words){
+  return words.split(' ').map(function (word) {
+    return (word.length > 4) ? word.split('').reverse().join('') : word;
+  }).join(' ');
+}
