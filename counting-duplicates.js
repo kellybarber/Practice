@@ -22,3 +22,10 @@ function duplicateCount(text){
 }
 
 duplicateCount("aabbcde")
+
+
+// Top Answer
+
+function duplicateCount(text){
+  return (text.toLowerCase().split('').sort().join('').match(/([^])\1+/g) || []).length;
+}
