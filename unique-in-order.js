@@ -1,7 +1,7 @@
 function uniqueInOrder(iterable) {
 
-  return iterable.split('').map((letter) => {
-    return letter
+  return iterable.split('').map((letter, index) => {
+    if ( iterable[index] === letter ) return letter 
   })
 
 }
