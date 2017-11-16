@@ -1,6 +1,10 @@
 function uniqueInOrder(iterable) {
 
+  return iterable.split('').map((letter) => {
+    return letter
+  })
+
 }
 
-uniqueInOrder('AAAABBBCCDAABBB')
+console.log(uniqueInOrder('AAAABBBCCDAABBB'))
 // ['A','B','C','D','A','B']
