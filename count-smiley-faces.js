@@ -19,3 +19,10 @@ function countSmileys(arr) {
 
 countSmileys([':D',':~)',';~D',':)'])
 countSmileys([':)',':(',':D',':O',':;'])
+
+
+function countSmileys(arr) {
+  return arr.filter(x => /^[:;][-~]?[)D]$/.test(x)).length;
+}
+
+// Need to practice with regular expressions
