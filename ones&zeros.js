@@ -14,7 +14,7 @@ function binaryArrayToNumber(arr) {
       case 3:
         decimal += item * 8
         break
-      default: console.log('Not Handled')
+      default: return 'Not Handled'
     }
   })
   return decimal
@@ -31,3 +31,13 @@ binaryArrayToNumber([0,1,1,0])
 binaryArrayToNumber([1,0,1,0])
 // 10
 console.log(binaryArrayToNumber([1,0,1,0]));
+
+
+// Alternate solutions:
+const binaryArrayToNumber = arr => parseInt(arr.join(''), 2)
+
+// // // // // // // // //
+
+function binaryArrayToNumber(arr) {
+  return arr.reduce( (a, b) => a << 1 | b )
+}
